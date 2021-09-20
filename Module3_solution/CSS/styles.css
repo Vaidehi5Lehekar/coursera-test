@@ -12,7 +12,7 @@
   padding-bottom: 25px;
   margin: 0;
 }
-.container h1 { /* Restaurant name */
+/*.container h1 {  Restaurant name 
   font-family: 'Lora', serif;
   color: black;
   font-style: bold;
@@ -21,9 +21,9 @@
   margin-block-start: 0;
   margin-block-end: 0;
   vertical-align: middle;
-}
 
-.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+}
+/*.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
   border: 1px solid #61122f;
 }
 .navbar-header button.navbar-toggle {
@@ -45,20 +45,67 @@
   text-decoration: none;
 
 }*/
+
+nav h1{
+  font-size: 1.8em;
+  background-color: grey;
+  
+  vertical-align: center;
+  padding-left: 10px;
+  border: 30px 30px;
+  margin: 0;
+  padding-bottom: 50px;
+
+
+
+}
 #Head{
   text-align: center;
 }
 
 
-#nav-list a {
+/*#nav-list a {
   color: black;
   text-align: center;
   text-decoration: none;
 }
 #nav-list a:hover {
   background: #E7E7E7;
+}*/
+
+nav ul{
+  float: right;
+  margin-right: 20px;
 }
 
+nav ul li{
+  display: inline-block;
+  
+  margin: 0 ;
+
+}
+nav ul li a{
+  color: black;
+  font-size: 2em;
+
+}
+a.active a.hover{
+  background: white;
+  text-decoration: none;
+
+}
+.checkbtn{
+  font-size: 20px;
+  color: black;
+  float: right;
+  margin-right: 40px;
+  line-height: 80px;
+  display: none;
+
+}
+#check{
+  display: none;
+}
 
 #heading{
  text-align: center;
@@ -88,6 +135,9 @@
    
    margin: 10px;
  }
+ nav ul {
+  display: none;
+ }
 
 }
 
@@ -97,13 +147,41 @@
    float: left;
    margin: 50px;
   }
+  nav ul {
+  display: none;
+ }
 }
 
 @media(max-width: 767px){          /*Mobile view */
 
  .col-xs-12 {
    float: left;
-   
    margin: 70px;
+   margin-top: 500px;
+  }
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 80px;
+    left: 0;
+    text-align: center;
+
+  }
+  nav ul li{
+    display: block;
+    font-size: 0.7em;
+    margin: 50px 0;
+
+  }
+  nav ul li a {
+    margin: 10px;
+  }
+
+  #check:checked ~ ul{
+    left: 0;
   }
 }
